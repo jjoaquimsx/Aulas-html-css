@@ -8,18 +8,26 @@
 <body>
     <h1>Exemplo de formulario</h1>
     <form action="cadastro.php" method="get" >
-        <p>
-            <label for="iemail">E-mail:</label>
-            <input type="email" name="email" id="iemail" autocomplete="on" required>
-        </p>
-        <p>
-            <input type="button" value="enviar">
-            <input type="reset" value="deletar">
-        </p>
+        <fieldset>
+            <legend>Preencha seus dados</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" minlength="5" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" autocomplete="on" required>
+            </p>
+            <p>
+                <input type="button" value="enviar">
+                <input type="reset" value="deletar">
+            </p>
+        </fieldset>
         <p>
             <label for="itel">Numero: </label>
-            <input type="tel" name="numero" id="itel">
+            <input type="tel" name="numero" id="itel" placeholder="+55 9.1234-5678">
         </p>
+        <!--Estudar mais sobre RegEx-->
     </form>
 </body>
 </html>
