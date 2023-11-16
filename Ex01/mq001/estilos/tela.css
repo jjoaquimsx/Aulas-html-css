@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/*Estilo para tela*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 1em;
+}
