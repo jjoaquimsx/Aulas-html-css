@@ -1,52 +1,184 @@
 @charset "UTF-8";
 
-@media (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 1.3em;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    html {
-        height: 100vh;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+html {
+    height: 100vh;
+}
+
+body {
+    background: blue url(imgs/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 330px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+img.tablet,
+img.print,
+img.pc,
+img.tv {
+    display: none;
+}
+
+img.phone {
+    display: block;
+    margin: auto;
+    filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px black;
+}
+
+@media (min-width: 768px) and (max-width: 992px)
+/*TABLET*/
+    {
     body {
-        background: blue url(imgs/back-phone.jpg) no-repeat;
-        background-size: cover;
-        background-position: center center;
+        background: black url(imgs/back-tablet.jpg) no-repeat;
     }
 
-    main {
-        background-color: rgba(255, 255, 255, 0.842);
-        width: 330px;
-        margin: auto;
-        border-radius: 10px;
-        padding: 10px;
-        margin-top: 10px;
-    }
-
-    img.tablet,
+    img.phone,
     img.print,
     img.pc,
     img.tv {
         display: none;
     }
 
-    img.phone {
+    img.tablet{
         display: block;
         margin: auto;
-        filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+        filter: drop-shadow(0px 0px 10px black);
     }
 
-    h1 {
-        text-align: center;
-        color: #fff;
-        text-shadow: 1px 1px 5px black;
+    main {
+        background-color: rgba(255, 255, 255, 0.747);
+        width: 720px;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        backdrop-filter: blur(5px);
+    }
+
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width:1200px)
+/*DESKTOP*/
+    {
+    body {
+        background: black url(imgs/back-pc.jpg) no-repeat;
+        background-position: bottom center;
+    }
+
+    img.phone,
+    img.print,
+    img.tablet,
+    img.tv {
+        display: none;
+    }
+
+    img.pc{
+        display: block;
+        margin: auto;
+        filter: drop-shadow(0px 0px 10px black);
+    }
+
+    main{
+        width: 800px;
+        height: 400px;
+        backdrop-filter: blur(5px);backdrop-filter: blur(5px);
     }
 }
 
-@media (max-width: 900px){
 
+
+@media screen and (min-width: 1200px)
+/*TVS*/
+    {
+    body {
+        background: black url(imgs/back-tv.jpg) no-repeat;
+        background-position: center center;
+    }
+
+    img.phone,
+    img.print,
+    img.tablet,
+    img.pc {
+        display: none;
+    }
+
+    img.tv{
+        display: block;
+        margin: auto;
+        filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.637));
+    }
+
+    main{
+        width: 1000px;
+        height: 400px;
+        backdrop-filter: blur(5px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    img.phone,
+    img.tablet,
+    img.pc
+    img.tv {
+        display: none;
+    }
+
+    img.print{
+        display: block;
+        margin: auto;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main{
+        border: 2px solid black;
+    }
 }
