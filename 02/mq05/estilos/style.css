@@ -64,6 +64,10 @@
         border: none;
     }
 
+    html{
+        scroll-behavior: smooth;
+    }
+
     body {
         background: linear-gradient(140deg, rgba(66,73,141,1) 0%, rgba(14,8,52,1) 70%);
         color: #ffffff;
